@@ -194,99 +194,96 @@ export default function Home() {
     activeTab === "todos"
       ? featuredCars
       : featuredCars.filter((car) => car.condition === activeTab);
-
   // Hero slider data
   const heroSlides = [
     {
       id: 1,
       title:
-        "Redefine tu <span class='text-red-500'>experiencia</span> al volante",
+        "Potencia tu <span class='text-red-500'>experiencia</span> al volante",
       subtitle:
-        "Descubre nuestra exclusiva colección de vehículos premium con garantía y financiamiento personalizado",
+        "Descubre cómo nuestro servicio de chipeo profesional puede transformar el rendimiento de tu vehículo",
       image: "/4.jpg",
-      cta: "Explorar vehículos",
+      cta: "Conocer Servicios",
     },
     {
       id: 2,
       title:
-        "Vehículos <span class='text-red-500'>0KM</span> con las mejores condiciones",
+        "Sistemas de <span class='text-red-500'>Escape</span> de Alto Rendimiento",
       subtitle:
-        "Encuentra tu auto nuevo con financiación a medida y entrega inmediata",
+        "Mejora el sonido y potencia de tu vehículo con nuestras soluciones personalizadas",
       image: "/1.jpg",
-      cta: "Ver 0KM",
+      cta: "Ver Opciones",
     },
     {
       id: 3,
       title:
-        "Consigna tu vehículo con <span class='text-red-500'>expertos</span>",
+        "Reprogramaciones con <span class='text-red-500'>tecnología</span> avanzada",
       subtitle:
-        "Maximiza el valor de tu auto con nuestro servicio de consignación profesional",
+        "Optimiza el rendimiento de tu motor con nuestro servicio especializado de reprogramación",
       image: "/3.jpg",
-      cta: "Consignar ahora",
+      cta: "Solicitar Diagnóstico",
     },
   ];
-
   // Services data
   const services = [
     {
-      title: "Compra",
+      title: "Chipeo",
       description:
-        "Adquiere el vehículo de tus sueños con asesoramiento personalizado y las mejores condiciones del mercado",
-      icon: <DollarSign className="h-10 w-10 text-red-500" />,
+        "Reprogramación electrónica profesional para camionetas y vehículos, mejorando la potencia, torque y rendimiento de combustible",
+      icon: <Sparkles className="h-10 w-10 text-red-500" />,
       features: [
-        "Tasación justa",
-        "Financiación flexible",
-        "Trámites incluidos",
+        "Mayor potencia y torque",
+        "Mejor rendimiento de combustible",
+        "Personalizado por vehículo",
       ],
     },
     {
-      title: "Venta",
+      title: "Escapes",
       description:
-        "Vendemos tu vehículo al mejor precio posible con un proceso transparente y sin complicaciones",
-      icon: <Tag className="h-10 w-10 text-red-500" />,
+        "Instalación y personalización de sistemas de escape de alta performance que mejoran el sonido y potencia de tu vehículo",
+      icon: <Settings className="h-10 w-10 text-red-500" />,
       features: [
-        "Marketing profesional",
-        "Amplia red de compradores",
-        "Asesoramiento de precio",
+        "Escapes deportivos",
+        "Sistemas completos",
+        "Personalización de sonido",
       ],
     },
     {
-      title: "Consignación",
+      title: "Reprogramaciones",
       description:
-        "Dejá tu vehículo en nuestras manos y nosotros nos encargamos de todo el proceso de venta",
-      icon: <Repeat className="h-10 w-10 text-red-500" />,
+        "Servicio especializado de reprogramación de centralitas para optimizar el rendimiento y eficiencia de tu vehículo",
+      icon: <BadgeCheck className="h-10 w-10 text-red-500" />,
       features: [
-        "Sin costos iniciales",
-        "Exhibición destacada",
-        "Gestión de ofertas",
+        "Diagnóstico profesional",
+        "Ajustes personalizados",
+        "Mapeo avanzado de ECU",
       ],
     },
   ];
-
   // Testimonials data
   const testimonials = [
     {
       id: 1,
       name: "Juan Pérez",
-      role: "Cliente satisfecho",
+      role: "Cliente Chipeo",
       content:
-        "Excelente servicio de principio a fin. Encontré exactamente el vehículo que buscaba a un precio justo. El equipo de AutoWeb San Juan hizo todo el proceso muy sencillo.",
+        "Increíble el cambio en mi camioneta después del chipeo. Aumentó la potencia notablemente y mejoró el consumo de combustible. El equipo de ISR Performance Mendoza es extremadamente profesional.",
       rating: 5,
     },
     {
       id: 2,
       name: "María González",
-      role: "Propietaria consignación",
+      role: "Cliente Sistema de Escape",
       content:
-        "Consigné mi auto con ellos y en menos de dos semanas lo vendieron al mejor precio posible. Profesionales y transparentes en todo momento.",
+        "Mi auto tiene un sonido espectacular gracias al nuevo sistema de escape. Trabajo impecable y atención personalizada. Totalmente recomendable.",
       rating: 5,
     },
     {
       id: 3,
       name: "Carlos Rodríguez",
-      role: "Comprador 0KM",
+      role: "Cliente Reprogramación",
       content:
-        "La mejor experiencia de compra que he tenido. Me asesoraron perfectamente y conseguí financiamiento con condiciones increíbles. ¡100% recomendados!",
+        "La reprogramación transformó por completo el rendimiento de mi vehículo. Ahora responde mucho mejor y es más eficiente. Gran trabajo técnico y excelente asesoramiento.",
       rating: 5,
     },
   ];
@@ -332,34 +329,39 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
             <div className="flex items-center gap-2">
+              {" "}
               <Link
                 href="#inicio"
                 className="flex items-center"
                 onClick={() => handleNavClick("inicio")}
               >
-                {/* Logo - Asegúrate de tener el archivo en tu carpeta public */}
-                <div className="relative h-10 w-10 mr-2">
+                {" "}
+                {/* Logo - Usando el nuevo logo.jpg */}{" "}
+                <div className="relative h-12 w-12 mr-2">
                   <Image
-                    src="/images/logo.jpg" // Reemplaza con la ruta de tu logo
-                    alt="AutoWeb San Juan Logo"
+                    src="/logo.jpg"
+                    alt="ISR Performance Mendoza Logo"
                     fill
                     className="object-contain"
                     priority
+                    quality={100}
                   />
                 </div>
                 <span className="text-2xl font-bold bg-gradient-to-r from-red-600 to-red-400 bg-clip-text text-transparent">
-                  Auto
+                  ISR
                 </span>
-                <span className="text-2xl mr-1 font-bold text-white">Web</span>
-                <span className="ml-1 text-sm text-zinc-400">San Juan</span>
+                <span className="mx-2 font-bold text-white">|</span>
+                <span className="text-2xl font-bold text-white">
+                  Performance
+                </span>
+                <span className="ml-1 text-sm text-zinc-400">Mendoza</span>
               </Link>
-            </div>
-
+            </div>{" "}
             <nav className="hidden md:flex items-center space-x-8">
               {[
                 { id: "inicio", label: "Inicio" },
                 { id: "servicios", label: "Servicios" },
-                { id: "vehiculos", label: "Vehículos" },
+                { id: "vehiculos", label: "Trabajos" },
                 { id: "nosotros", label: "Nosotros" },
                 { id: "contacto", label: "Contacto" },
               ].map((item) => (
@@ -385,10 +387,38 @@ export default function Home() {
                   )}
                 </Link>
               ))}
-            </nav>
-
+            </nav>{" "}
             {/* Actions */}
             <div className="flex items-center gap-3">
+              <div className="hidden md:flex items-center gap-2 mr-2">
+                <a
+                  href="https://wa.me/5492615123456"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-zinc-400 hover:text-green-500 transition-colors"
+                >
+                  <svg
+                    className="h-5 w-5"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                  </svg>
+                </a>
+                <a
+                  href="#"
+                  className="text-zinc-400 hover:text-pink-500 transition-colors"
+                >
+                  <Instagram className="h-5 w-5" />
+                </a>
+                <a
+                  href="#"
+                  className="text-zinc-400 hover:text-blue-500 transition-colors"
+                >
+                  <Facebook className="h-5 w-5" />
+                </a>
+              </div>
+
               <Button
                 variant="default"
                 className="hidden sm:flex items-center gap-1 bg-gradient-to-r from-red-600 to-red-500 hover:from-red-500 hover:to-red-400 text-white shadow-lg shadow-red-500/10 hover:shadow-red-500/20 transition-all duration-200"
@@ -420,15 +450,28 @@ export default function Home() {
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         )}
       >
+        {" "}
         <div className="container h-full flex flex-col py-8">
+          {" "}
           <div className="flex justify-between items-center mb-12">
             <div className="flex items-center gap-3">
-              <div className="flex items-center">
+              <div className="relative h-10 w-10 mr-2">
+                <Image
+                  src="/logo.jpg"
+                  alt="ISR Performance Mendoza Logo"
+                  fill
+                  className="object-contain"
+                  quality={100}
+                />
+              </div>              <div className="flex items-center">
                 <span className="text-2xl font-bold text-white bg-gradient-to-r from-red-600 to-red-400 bg-clip-text text-transparent">
-                  Auto
+                  ISR
                 </span>
-                <span className="text-2xl font-bold text-white">Web</span>
-                <span className="ml-1 text-sm text-zinc-400">San Juan</span>
+                <span className="mx-2 font-bold text-white">|</span>
+                <span className="text-2xl font-bold text-white">
+                  Performance
+                </span>
+                <span className="ml-1 text-sm text-zinc-400">Mendoza</span>
               </div>
             </div>
             <Button
@@ -439,13 +482,12 @@ export default function Home() {
             >
               <X className="h-6 w-6" />
             </Button>
-          </div>
-
+          </div>{" "}
           <nav className="flex flex-col gap-6 text-center">
             {[
               { id: "inicio", label: "Inicio" },
               { id: "servicios", label: "Servicios" },
-              { id: "vehiculos", label: "Vehículos" },
+              { id: "vehiculos", label: "Trabajos" },
               { id: "nosotros", label: "Nosotros" },
               { id: "contacto", label: "Contacto" },
             ].map((item) => (
@@ -468,7 +510,6 @@ export default function Home() {
               </Link>
             ))}
           </nav>
-
           <div className="mt-auto space-y-4">
             <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-zinc-400" />
@@ -504,7 +545,7 @@ export default function Home() {
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent z-10" />
             <Image
               src={heroSlides[activeSlide].image}
-              alt="Vehículo premium en AutoWeb San Juan"
+              alt="Vehículo con modificaciones de ISR Performance Mendoza"
               fill
               className="object-cover object-center transition-opacity duration-1000"
               quality={100}
@@ -581,7 +622,7 @@ export default function Home() {
             <div className="container mx-auto px-6">
               <div className="flex items-center justify-between">
                 <div className="text-sm text-zinc-500">
-                  AutoWeb San Juan · Concesionario
+                  ISR Performance Mendoza · Taller Especializado
                 </div>{" "}
                 <div className="flex items-center gap-4">
                   <a
@@ -626,13 +667,13 @@ export default function Home() {
               <span className="inline-flex items-center rounded-full border border-red-500/30 bg-gradient-to-r from-red-500/10 to-red-600/10 px-4 py-1.5 text-sm text-red-400 mb-6">
                 <Settings className="h-4 w-4 mr-2" />
                 Soluciones Integrales
-              </span>
+              </span>{" "}
               <h2 className="text-4xl sm:text-5xl font-bold tracking-tight bg-gradient-to-r from-white to-zinc-300 bg-clip-text text-transparent mb-4">
                 Nuestros <span className="text-red-500">Servicios</span>
               </h2>
               <p className="max-w-2xl text-lg text-zinc-400 leading-relaxed">
-                Ofrecemos soluciones completas para todas tus necesidades
-                automotrices con la más alta calidad y profesionalismo
+                Ofrecemos servicios especializados para maximizar el rendimiento
+                y personalización de tu vehículo con tecnología de punta
               </p>
             </div>
 
@@ -689,35 +730,34 @@ export default function Home() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 relative">
                 {/* Connection line */}
-                <div className="hidden lg:block absolute top-[60px] left-1/4 right-1/4 h-0.5 bg-gradient-to-r from-transparent via-red-500/50 to-transparent"></div>
-
+                <div className="hidden lg:block absolute top-[60px] left-1/4 right-1/4 h-0.5 bg-gradient-to-r from-transparent via-red-500/50 to-transparent"></div>{" "}
                 {[
                   {
                     step: "01",
-                    title: "Consulta Inicial",
+                    title: "Diagnóstico",
                     description:
-                      "Evaluamos tus necesidades con asesoramiento personalizado para entender exactamente lo que buscas",
+                      "Evaluamos tu vehículo mediante análisis computarizado para identificar las oportunidades de mejora",
                     icon: <MessageSquare className="h-6 w-6 text-red-500" />,
                   },
                   {
                     step: "02",
-                    title: "Selección Precisa",
+                    title: "Personalización",
                     description:
-                      "Te guiamos para encontrar el vehículo ideal que se ajuste a tus preferencias y presupuesto",
+                      "Diseñamos un plan de modificación específico para tu vehículo según tus objetivos de rendimiento",
                     icon: <Search className="h-6 w-6 text-red-500" />,
                   },
                   {
                     step: "03",
-                    title: "Financiamiento",
+                    title: "Implementación",
                     description:
-                      "Opciones flexibles adaptadas a tu situación económica con las mejores condiciones del mercado",
-                    icon: <DollarSign className="h-6 w-6 text-red-500" />,
+                      "Aplicamos las modificaciones utilizando equipamiento especializado y técnicas avanzadas",
+                    icon: <Settings className="h-6 w-6 text-red-500" />,
                   },
                   {
                     step: "04",
-                    title: "Entrega Final",
+                    title: "Validación",
                     description:
-                      "Gestionamos todos los trámites y te entregamos tu vehículo listo para disfrutar",
+                      "Realizamos pruebas exhaustivas para confirmar las mejoras de rendimiento y ajustar si es necesario",
                     icon: <CheckCircle className="h-6 w-6 text-red-500" />,
                   },
                 ].map((step, index) => (
@@ -769,39 +809,36 @@ export default function Home() {
               <span className="inline-flex items-center rounded-full border border-red-500/30 bg-gradient-to-r from-red-500/10 to-red-600/10 px-4 py-1.5 text-sm text-red-400 mb-6">
                 <Sparkles className="h-4 w-4 mr-2" />
                 Vehículos Premium
-              </span>
-
+              </span>{" "}
               <h2 className="text-4xl sm:text-5xl font-bold tracking-tight mb-4 bg-gradient-to-r from-white to-zinc-300 bg-clip-text text-transparent">
-                Explora Nuestro <span className="text-red-500">Catálogo</span>
+                Galería de <span className="text-red-500">Trabajos</span>
               </h2>
-
               <p className="max-w-2xl text-lg text-zinc-400 leading-relaxed mb-12">
-                Descubre nuestra colección exclusiva de vehículos premium con
-                las mejores condiciones del mercado y opciones de financiamiento
-                flexibles
+                Explora nuestra galería con los mejores trabajos realizados en
+                chipeo, sistemas de escape y reprogramaciones para diversos
+                vehículos
               </p>
-
               <div className="flex flex-col items-center">
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-16 w-full max-w-4xl">
                   {[
                     {
-                      title: "Vehículos 0KM",
+                      title: "Chipeo de Vehículos",
                       description:
-                        "Los últimos modelos con garantía de fábrica y financiamiento personalizado",
+                        "Mejoras de rendimiento y optimización de potencia para distintos tipos de vehículos",
                       icon: <BadgeCheck className="h-10 w-10 text-green-500" />,
                       color: "from-green-600 to-green-500",
                     },
                     {
-                      title: "Usados Seleccionados",
+                      title: "Sistemas de Escape",
                       description:
-                        "Vehículos certificados con garantía mecánica y excelente estado",
+                        "Instalaciones personalizadas para mejorar el sonido y rendimiento del vehículo",
                       icon: <Award className="h-10 w-10 text-blue-500" />,
                       color: "from-blue-600 to-blue-500",
                     },
                     {
-                      title: "Consignación",
+                      title: "Reprogramaciones",
                       description:
-                        "Vendemos tu vehículo al mejor precio con un proceso transparente",
+                        "Modificaciones específicas en la ECU para optimizar la potencia y eficiencia",
                       icon: <Repeat className="h-10 w-10 text-purple-500" />,
                       color: "from-purple-600 to-purple-500",
                     },
@@ -837,9 +874,144 @@ export default function Home() {
                   >
                     Ver Catálogo Completo
                     <ArrowRight className="ml-2 h-5 w-5" />
-                  </Button>
+                  </Button>{" "}
                 </Link>
               </div>
+            </div>
+          </div>
+        </section>
+        {/* Galería de Trabajos Realizados */}
+        <section className="py-24 bg-zinc-900 relative overflow-hidden border-t border-zinc-800">
+          <div className="container relative z-10 px-4 sm:px-6">
+            {" "}
+            <div className="text-center mb-16">
+              <span className="inline-flex items-center rounded-full border border-red-500/30 bg-gradient-to-r from-red-500/10 to-red-600/10 px-4 py-1.5 text-sm text-red-400 mb-6">
+                <Sparkles className="h-4 w-4 mr-2" />
+                <span>+50 Proyectos Completados</span>
+              </span>
+              <h2 className="text-4xl sm:text-5xl font-bold tracking-tight mb-4 bg-gradient-to-r from-white to-zinc-300 bg-clip-text text-transparent">
+                Nuestros <span className="text-red-500">Mejores Trabajos</span>
+              </h2>
+              <p className="max-w-2xl mx-auto text-lg text-zinc-400 leading-relaxed mb-12">
+                Mira algunos de nuestros proyectos más destacados y descubre lo
+                que podemos hacer por tu vehículo
+              </p>
+              <div className="flex justify-center gap-4 mb-12">
+                <span className="inline-flex items-center gap-2">
+                  <span className="w-3 h-3 rounded-full bg-green-500"></span>
+                  <span className="text-zinc-400">Chipeo</span>
+                </span>
+                <span className="inline-flex items-center gap-2">
+                  <span className="w-3 h-3 rounded-full bg-blue-500"></span>
+                  <span className="text-zinc-400">Escapes</span>
+                </span>
+                <span className="inline-flex items-center gap-2">
+                  <span className="w-3 h-3 rounded-full bg-purple-500"></span>
+                  <span className="text-zinc-400">Reprogramaciones</span>
+                </span>
+              </div>
+            </div>
+            {/* Galería */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                {
+                  id: 1,
+                  image: "/1.jpg",
+                  title: "BMW Serie 3",
+                  description:
+                    "Chipeo profesional para mayor potencia y rendimiento",
+                },
+                {
+                  id: 2,
+                  image: "/2.jpg",
+                  title: "Audi RS5",
+                  description: "Sistema de escape deportivo personalizado",
+                },
+                {
+                  id: 3,
+                  image: "/3.jpg",
+                  title: "Mercedes AMG",
+                  description: "Reprogramación y optimización de ECU",
+                },
+                {
+                  id: 4,
+                  image: "/4.jpg",
+                  title: "Ford Raptor",
+                  description: "Chipeo específico para camionetas 4x4",
+                },
+                {
+                  id: 5,
+                  image: "/5.jpg",
+                  title: "Volkswagen Golf GTI",
+                  description: "Sistema de escape de alto rendimiento",
+                },
+                {
+                  id: 6,
+                  image: "/6.jpg",
+                  title: "Toyota Hilux",
+                  description: "Optimización de potencia y consumo",
+                },
+                {
+                  id: 7,
+                  image: "/7.jpg",
+                  title: "Audi S3",
+                  description: "Paquete completo: chipeo + escape deportivo",
+                },
+              ].map((item) => (
+                <div
+                  key={item.id}
+                  className="group relative rounded-xl overflow-hidden border border-zinc-800 aspect-video hover:border-red-500/30 transition-all duration-300"
+                >
+                  {" "}
+                  <Image
+                    src={item.image}
+                    alt={`${item.title} - ISR Performance Mendoza`}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-110 group-hover:filter group-hover:brightness-110"
+                  />
+                  {/* Overlay siempre visible con gradiente en la parte inferior */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-6">
+                    {/* Badge para tipo de servicio */}
+                    <div className="absolute top-4 right-4">
+                      {item.description.includes("Chipeo") ? (
+                        <span className="bg-green-600 text-white text-xs px-2 py-1 rounded-full">
+                          Chipeo
+                        </span>
+                      ) : item.description.includes("escape") ? (
+                        <span className="bg-blue-600 text-white text-xs px-2 py-1 rounded-full">
+                          Escape
+                        </span>
+                      ) : (
+                        <span className="bg-purple-600 text-white text-xs px-2 py-1 rounded-full">
+                          Reprogramación
+                        </span>
+                      )}
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-2 relative inline-block">
+                      {item.title}
+                      <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-red-500 group-hover:w-full transition-all duration-300"></span>
+                    </h3>
+                    <p className="text-zinc-300 text-sm">{item.description}</p>
+                  </div>{" "}
+                  {/* Overlay adicional al hacer hover con botón */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <button className="px-4 py-2 bg-red-600 hover:bg-red-700 text-white text-sm rounded-md transition-all transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 duration-300">
+                      Ver detalles
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+            {/* Botón Ver Más */}
+            <div className="flex justify-center mt-12">
+              <Button
+                size="lg"
+                className="bg-zinc-800 hover:bg-zinc-700 text-white border border-zinc-700 px-8 py-6"
+                onClick={() => alert("Próximamente más proyectos disponibles")}
+              >
+                Ver más trabajos
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
             </div>
           </div>
         </section>
@@ -853,37 +1025,53 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div className="relative order-2 lg:order-1">
                 <div className="absolute -top-6 -left-6 w-24 h-24 border-l-2 border-t-2 border-red-500 z-10" />
-                <div className="absolute -bottom-6 -right-6 w-24 h-24 border-r-2 border-b-2 border-red-500 z-10" />
+                <div className="absolute -bottom-6 -right-6 w-24 h-24 border-r-2 border-b-2 border-red-500 z-10" />{" "}
                 <div className="relative h-[300px] sm:h-[400px] md:h-[500px] rounded-lg overflow-hidden">
                   <Image
-                    src="/images/logo.jpg"
-                    alt="Showroom AutoWeb San Juan"
+                    src="/3.jpg"
+                    alt="Trabajo destacado - Mercedes AMG - ISR Performance Mendoza"
                     fill
                     className="object-cover"
+                    quality={100}
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent">
+                    <div className="absolute bottom-8 left-8">
+                      <span className="bg-red-600 text-white text-xs px-3 py-1 rounded-full mb-2 inline-block">
+                        Trabajo Destacado
+                      </span>
+                      <h4 className="text-xl text-white font-bold mt-2">
+                        Mercedes AMG
+                      </h4>
+                      <p className="text-zinc-300 text-sm">
+                        Reprogramación y optimización profesional
+                      </p>
+                    </div>
+                  </div>
                 </div>
-              </div>
+              </div>{" "}
               <div className="order-1 lg:order-2">
                 <div className="inline-flex items-center rounded-full border border-red-500/30 bg-red-500/10 px-3 py-1 text-sm text-red-500 mb-4">
                   Nuestra Historia
                 </div>
                 <h2 className="text-4xl font-bold tracking-tight sm:text-5xl mb-6 bg-gradient-to-r from-white to-zinc-300 bg-clip-text text-transparent">
-                  Sobre AutoWeb San Juan
+                  Sobre ISR Performance Mendoza
                 </h2>
                 <p className="text-zinc-400 text-lg leading-relaxed mb-6">
-                  Con más de 15 años de experiencia en el mercado automotriz,
-                  nos hemos consolidado como una de las agencias más confiables
-                  y prestigiosas de San Juan, especializada en{" "}
+                  Con más de 8 años de experiencia en el sector de modificación
+                  y mejora de vehículos, nos hemos consolidado como uno de los
+                  talleres más innovadores y confiables de Mendoza,
+                  especializados en{" "}
                   <span className="text-red-500 font-semibold">
-                    compra, venta, consignación de vehículos usados y 0KM
+                    chipeo de camionetas, sistemas de escape de alto rendimiento
+                    y reprogramaciones profesionales
                   </span>
                   .
                 </p>
                 <p className="text-zinc-400 text-lg leading-relaxed mb-8">
-                  Nuestro compromiso es ofrecer vehículos de la más alta
-                  calidad, con garantía extendida y el mejor servicio post-venta
-                  para asegurar tu satisfacción total.
-                </p>
+                  Nuestro compromiso es ofrecer servicios de la más alta calidad
+                  técnica, utilizando tecnología de punta y garantizando mejoras
+                  reales y medibles en el rendimiento de tu vehículo.
+                </p>{" "}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div className="flex items-start gap-4">
                     <div className="rounded-full bg-red-500/10 p-3 text-red-500">
@@ -891,10 +1079,10 @@ export default function Home() {
                     </div>
                     <div>
                       <h3 className="text-xl font-bold hover:text-red-500 transition-colors duration-200">
-                        Garantía extendida
+                        Tecnología Avanzada
                       </h3>
                       <p className="mt-2 text-zinc-400">
-                        Todos nuestros vehículos incluyen garantía
+                        Equipamiento y software de última generación
                       </p>
                     </div>
                   </div>
@@ -904,10 +1092,10 @@ export default function Home() {
                     </div>
                     <div>
                       <h3 className="text-xl font-bold hover:text-red-500 transition-colors duration-200">
-                        Servicio técnico
+                        Técnicos Certificados
                       </h3>
                       <p className="mt-2 text-zinc-400">
-                        Mantenimiento y reparación especializada
+                        Personal altamente especializado
                       </p>
                     </div>
                   </div>
@@ -916,16 +1104,16 @@ export default function Home() {
             </div>
           </div>
         </section>
-        {/* CTA Section */}
+        {/* CTA Section */}{" "}
         <section className="py-24 bg-gradient-to-r from-black via-zinc-900 to-black relative overflow-hidden">
           <div className="container relative z-10 px-4 sm:px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-4xl font-bold tracking-tight sm:text-5xl mb-6 bg-gradient-to-r from-white to-zinc-300 bg-clip-text text-transparent">
-                ¿Listo para encontrar tu vehículo ideal?
+                ¿Listo para mejorar el rendimiento de tu vehículo?
               </h2>
               <p className="text-xl text-zinc-400 mb-10 max-w-2xl mx-auto">
-                Visita nuestro showroom y descubre por qué somos la mejor opción
-                en el mercado automotriz
+                Visita nuestro taller y descubre cómo podemos transformar tu
+                experiencia de conducción con nuestros servicios especializados
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button
@@ -933,7 +1121,7 @@ export default function Home() {
                   className="bg-red-600 hover:bg-red-700 text-base px-8 h-14 rounded-md"
                   onClick={() => handleNavClick("contacto")}
                 >
-                  Agendar visita
+                  Agendar diagnóstico
                 </Button>{" "}
                 <Button
                   size="lg"
@@ -1007,7 +1195,6 @@ export default function Home() {
                   </Button>
                 </div>
               </div>
-
               {/* Email Card */}
               <div className="group relative rounded-xl border border-zinc-800 bg-zinc-900/50 p-8 hover:border-red-500/30 transition-all duration-300 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-red-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -1040,7 +1227,6 @@ export default function Home() {
                   </Button>
                 </div>
               </div>
-
               {/* Instagram Card */}
               <div className="group relative rounded-xl border border-zinc-800 bg-zinc-900/50 p-8 hover:border-pink-500/30 transition-all duration-300 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-pink-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -1066,9 +1252,112 @@ export default function Home() {
                       <span>Ir a Instagram</span>
                       <ArrowRight className="h-4 w-4" />
                     </span>
-                  </Button>
+                  </Button>{" "}
                 </div>
-              </div>
+              </div>{" "}
+            </div>
+          </div>
+
+          {/* Formulario de Contacto */}
+          <div className="mt-16">
+            <div className="text-center mb-12">
+              <h3 className="text-3xl font-bold mb-4 bg-gradient-to-r from-white to-zinc-300 bg-clip-text text-transparent">
+                Envíanos un <span className="text-red-500">Mensaje</span>
+              </h3>
+              <p className="text-zinc-400 max-w-2xl mx-auto">
+                Completa el formulario y te responderemos a la brevedad
+              </p>
+            </div>
+
+            <div className="max-w-3xl mx-auto rounded-xl border border-zinc-800 bg-zinc-900/50 p-8">
+              <form className="space-y-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div className="space-y-2">
+                    <label
+                      htmlFor="nombre"
+                      className="text-sm font-medium text-zinc-400"
+                    >
+                      Nombre completo
+                    </label>
+                    <Input
+                      id="nombre"
+                      placeholder="Tu nombre"
+                      className="bg-zinc-800 border-zinc-700 text-white focus:border-red-500"
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <label
+                      htmlFor="email"
+                      className="text-sm font-medium text-zinc-400"
+                    >
+                      Email
+                    </label>
+                    <Input
+                      id="email"
+                      type="email"
+                      placeholder="tucorreo@ejemplo.com"
+                      className="bg-zinc-800 border-zinc-700 text-white focus:border-red-500"
+                    />
+                  </div>
+                </div>
+
+                <div className="space-y-2">
+                  <label
+                    htmlFor="telefono"
+                    className="text-sm font-medium text-zinc-400"
+                  >
+                    Teléfono
+                  </label>
+                  <Input
+                    id="telefono"
+                    placeholder="Tu número de teléfono"
+                    className="bg-zinc-800 border-zinc-700 text-white focus:border-red-500"
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <label
+                    htmlFor="mensaje"
+                    className="text-sm font-medium text-zinc-400"
+                  >
+                    Mensaje
+                  </label>
+                  <Textarea
+                    id="mensaje"
+                    placeholder="¿En qué podemos ayudarte?"
+                    className="bg-zinc-800 border-zinc-700 text-white min-h-[120px] focus:border-red-500"
+                  />
+                </div>
+
+                <Button
+                  type="button"
+                  className="w-full bg-gradient-to-r from-red-600 to-red-500 hover:from-red-500 hover:to-red-400 py-6 font-medium"
+                  onClick={() =>
+                    alert(
+                      "Formulario enviado correctamente. Te contactaremos pronto."
+                    )
+                  }
+                >
+                  Enviar mensaje
+                </Button>
+              </form>
+            </div>
+          </div>
+
+          {/* Mapa Interactivo */}
+          <div className="mt-16 rounded-xl overflow-hidden border border-zinc-800">
+            <div className="relative h-[400px] w-full">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d107159.75282885498!2d-68.9080542!3d-32.8894587!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e093ec45179bf%3A0x205a78f6d20efa3a!2sMendoza%2C%20Capital%2C%20Mendoza!5e0!3m2!1ses-419!2sar!4v1652979298452!5m2!1ses-419!2sar"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Ubicación ISR Performance Mendoza"
+                className="absolute inset-0"
+              ></iframe>
             </div>
           </div>
         </section>
@@ -1077,19 +1366,32 @@ export default function Home() {
       <footer className="bg-zinc-950 py-16 border-t border-zinc-900">
         <div className="container px-4 sm:px-6">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+            {" "}
             <div className="space-y-6">
+              {" "}
               <div className="flex items-center gap-3">
-                <div className="flex items-center">
+                <div className="relative h-10 w-10 mr-2">
+                  <Image
+                    src="/logo.jpg"
+                    alt="ISR Performance Mendoza Logo"
+                    fill
+                    className="object-contain"
+                    quality={100}
+                  />
+                </div>                <div className="flex items-center">
                   <span className="text-2xl font-bold text-white bg-gradient-to-r from-red-600 to-red-400 bg-clip-text text-transparent">
-                    Auto
+                    ISR
                   </span>
-                  <span className="text-2xl font-bold text-white">Web</span>
-                  <span className="ml-1 text-sm text-zinc-400">San Juan</span>
+                  <span className="mx-2 font-bold text-white">|</span>
+                  <span className="text-2xl font-bold text-white">
+                    Performance
+                  </span>
+                  <span className="ml-1 text-sm text-zinc-400">Mendoza</span>
                 </div>
               </div>
               <p className="text-zinc-400">
-                Tu mejor opción en vehículos nuevos y seminuevos con la mejor
-                garantía del mercado.
+                Especialistas en chipeo, sistemas de escape y reprogramaciones
+                para potenciar el rendimiento de tu vehículo.
               </p>{" "}
               <div className="flex gap-4">
                 <a
@@ -1153,7 +1455,7 @@ export default function Home() {
                     className="text-zinc-400 hover:text-red-500 transition-colors duration-200"
                     onClick={() => handleNavClick("vehiculos")}
                   >
-                    Vehículos
+                    Trabajos
                   </Link>
                 </li>
                 <li>
@@ -1168,6 +1470,7 @@ export default function Home() {
               </ul>
             </div>
             <div>
+              {" "}
               <h3 className="text-lg font-bold mb-6 text-white">Servicios</h3>
               <ul className="space-y-4">
                 <li>
@@ -1176,7 +1479,7 @@ export default function Home() {
                     className="text-zinc-400 hover:text-red-500 transition-colors duration-200"
                     onClick={() => handleNavClick("servicios")}
                   >
-                    Compra 0KM
+                    Chipeo
                   </Link>
                 </li>
                 <li>
@@ -1185,7 +1488,7 @@ export default function Home() {
                     className="text-zinc-400 hover:text-red-500 transition-colors duration-200"
                     onClick={() => handleNavClick("servicios")}
                   >
-                    Compra Usados
+                    Sistemas de Escape
                   </Link>
                 </li>
                 <li>
@@ -1194,7 +1497,7 @@ export default function Home() {
                     className="text-zinc-400 hover:text-red-500 transition-colors duration-200"
                     onClick={() => handleNavClick("servicios")}
                   >
-                    Venta
+                    Reprogramaciones
                   </Link>
                 </li>
                 <li>
@@ -1203,7 +1506,7 @@ export default function Home() {
                     className="text-zinc-400 hover:text-red-500 transition-colors duration-200"
                     onClick={() => handleNavClick("servicios")}
                   >
-                    Consignación
+                    Diagnóstico
                   </Link>
                 </li>
               </ul>
@@ -1214,7 +1517,7 @@ export default function Home() {
                 <li className="flex items-center gap-3">
                   <MapPin className="h-5 w-5 text-red-500" />
                   <span className="text-zinc-400">
-                    Av. Libertador 1234, San Juan
+                    Av. San Martín 1234, Mendoza
                   </span>
                 </li>
                 <li className="flex items-center gap-3">
@@ -1230,8 +1533,8 @@ export default function Home() {
           </div>
           <div className="mt-16 pt-8 border-t border-zinc-800 text-center text-zinc-500">
             <p>
-              © {new Date().getFullYear()} AutoWeb San Juan. Todos los derechos
-              reservados.
+              © {new Date().getFullYear()} ISR Performance Mendoza. Todos los
+              derechos reservados.
             </p>
           </div>
         </div>
